@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Clock</string>
+    <string name="app_name">Clockapp</string>
+    <string name="timer">Timer</string>
 </resources>
