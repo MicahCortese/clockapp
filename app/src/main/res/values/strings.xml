@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Clockapp</string>
+    <string name="start_timer_button">Start Timer</string>
     <string name="timer">Timer</string>
 </resources>

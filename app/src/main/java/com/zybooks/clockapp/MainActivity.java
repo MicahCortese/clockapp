@@ -1,6 +1,8 @@
 package com.zybooks.clockapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +25,11 @@ public class MainActivity extends AppCompatActivity {
         SimpleDateFormat dateFormat = new SimpleDateFormat("EEEE, MMM d");
         String dateTime = dateFormat.format(calendar.getTime()).toString();
         textDate.setText(dateTime);
+    }
+
+    public void onTimerClick(View view) {
+        Intent intent = new Intent(this, Timer.class);
+        startActivity(intent);
     }
 }
 

@@ -2,12 +2,19 @@ package com.zybooks.clockapp;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Timer extends AppCompatActivity{
     private long timeLeftInSecond = 3600000;
-
-    TextView countdownTimer = findViewById(R.id.activity_timer); //this line shows the textview from the activity_main.xml
+    //private TextView countdownTimer;
+    //private CountDownTimer timerObject;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_timer);
+    }
+    TextView countdownTimer = findViewById(R.id.timer); //this line shows the textview from the activity_main.xml
 
     CountDownTimer timer = new CountDownTimer(timeLeftInSecond, 1000) {
         @Override
@@ -21,10 +28,11 @@ public class Timer extends AppCompatActivity{
             // Timer finishes, do something here
         }
     }.start();
-}
 
+    public Timer() {
+    }
 
-private void updateCountdownText() {
+    private void updateCountdownText() {
     int hours = (int) (timeLeftInSecond / 1000) / 3600;
     int minutes = (int) ((timeLeftInSecond / 1000) % 3600) / 60;
     int seconds = (int) (timeLeftInSecond / 1000) % 60;
@@ -41,5 +49,5 @@ protected void onDestroy() {
     if (timer != null) {
         timer.cancel();
     }
-}
+  }
 }
