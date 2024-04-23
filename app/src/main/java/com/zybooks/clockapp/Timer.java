@@ -36,8 +36,6 @@ public class Timer extends AppCompatActivity {
         int minutes = (int) ((timeLeftInSecond / 1000) % 3600) / 60;
         int seconds = (int) (timeLeftInSecond / 1000) % 60;
 
-
-
         String timeLeftFormatted = String.format("%02d:%02d:%02d", hours, minutes,seconds);
         countdownTimer.setText(timeLeftFormatted);
     }

@@ -32,41 +32,41 @@ public class AlarmClock extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        createNotificationChannel();
-
+//        createNotificationChannel();
+    }
         // Radio button to call showTimePicker when the selectedTime button is pressed
-        binding.selectedTime.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+//        binding.selectedTime.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
 
-                showTimePicker();
+//                showTimePicker();
 
-            }
-        });
+//            }
+//        });
 
         // Radio button to call setAlarm when the setAlarmBtn is pressed
-        binding.setAlarmBtn.setOnclickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+//        binding.setAlarmBtn.setOnclickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
 
-                setAlarm();
+//                setAlarm();
 
-            }
-        });
+//           }
+//        });
 
         // Radio button to call cancelAlarm when the cancelAlarmBtn is pressed
-        binding.cancelAlarmBtn.setOnlickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+//        binding.cancelAlarmBtn.setOnlickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
 
-                cancelAlarm();
+//                cancelAlarm();
 
-            }
-        });
-    }
+//            }
+//        });
+//    }
 
     // Handles the creation of alarm depending on current values in showTimePicker
-    private void setAlarm() {
+        private void setAlarm() {
 
         alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 
@@ -98,13 +98,13 @@ public class AlarmClock extends AppCompatActivity {
 
                 if (picker.getHour() > 12) {
 
-                    binding.selectedTime.setText(
-                            String.format("%02d",(picker.getHour()-12) + " : " + String.format("%02d",picker.getMinute()) + " PM")
-                    );
+                    //binding.selectedTime.setText(
+                    //       String.format("%02d",(picker.getHour()-12) + " : " + String.format("%02d",picker.getMinute()) + " PM")
+                    //);
 
                 } else {
 
-                    binding.selectedTime.setText(picker.getHour() + " : " + picker.getMinute() + " AM");
+                    //binding.selectedTime.setText(picker.getHour() + " : " + picker.getMinute() + " AM");
 
                 }
 
@@ -140,7 +140,7 @@ public class AlarmClock extends AppCompatActivity {
     // Method that handles the creation of notification channels when creating an alarm notification.
     private void createNotificationChannel() {
 
-        if  (Build.VERSION.SDK_INT >= Build.VERSION_CODES.0) {
+        //if  (Build.VERSION.SDK_INT >= Build.VERSION_CODES.0) {
             CharSequence name = "Group2ReminderChannel";
             String description = "Channel for Alarm Manager";
             int importance = NotificationManager.IMPORTANCE_HIGH;
@@ -149,7 +149,7 @@ public class AlarmClock extends AppCompatActivity {
 
             NotificationManager notificationManager = getSystemService(NotificationManager.class);
             notificationManager.createNotificationChannel(channel);
-        }
+        //}
 
     }
 }

@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         TextView textDate = findViewById(R.id.editTextDate);
         Calendar calendar = Calendar.getInstance();
         SimpleDateFormat dateFormat = new SimpleDateFormat("EEEE, MMM d");
-        String dateTime = dateFormat.format(calendar.getTime()).toString();
+        String dateTime = dateFormat.format(calendar.getTime());
         textDate.setText(dateTime);
     }
 
@@ -30,4 +30,3 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 }
-
