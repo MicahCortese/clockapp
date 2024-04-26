@@ -29,4 +29,14 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Timer.class);
         startActivity(intent);
     }
+
+    public void onAlarmClick(View view) {
+        Intent intent = new Intent(this, AlarmClock.class);
+        startActivity(intent);
+    }
+
+    public void onStopWatchClick(View view) {
+        Intent intent = new Intent(this, stopwatch.class);
+        startActivity(intent);
+    }
 }

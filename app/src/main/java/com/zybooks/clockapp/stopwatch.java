@@ -1,4 +1,4 @@
-package com.zybooks.stopwatch;
+package com.zybooks.clockapp;
 
 import android.app.Activity;
 import android.os.Handler;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.os.Bundle;
 import java.util.Locale;
 import android.widget.TextView;
+
+import com.zybooks.clockapp.R;
 
 public class stopwatch extends Activity {
 

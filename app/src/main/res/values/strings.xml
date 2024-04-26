@@ -1,10 +1,12 @@
 <resources>
     <string name="app_name">Clockapp</string>
-    <string name="start_timer_button">Start Timer</string>
+    <string name="start_timer_button">Timer</string>
     <string name="timer">Timer</string>
-    <string name="name">stopwatch</string>
+    <string name="start_stopwatch_button">Stopwatch</string>
     <string name="start">Start</string>
     <string name="stop">Stop</string>
     <string name="reset">Reset</string>
     <string name="time">Time</string>
+    <string name="start_alarm_button">Alarm</string>
+    <string name="select_time_button">Select Time</string>
 </resources>

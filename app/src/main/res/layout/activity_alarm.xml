@@ -5,29 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="AlarmClock">
+    android:background="@color/teal">
 
     <TextView
+        android:id="@+id/selectTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/selectedTime"
         android:layout_marginTop="200dp"
-        android:text="08 : 45 PM"
+        android:text="@string/select_time_button"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="46dp"/>
 
     <Button
-        android:id="@+id/selectTimeBtn"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginHorizontal="26dp"
-        android:text="Select Time"
-        android:textSize="26dp"/>
-
-    <Button
-        android:id="@+id/setAlarmBtn"
+        android:id="@+id/setAlarm"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginTop="10dp"
@@ -36,7 +27,7 @@
         android:textSize="26dp"/>
 
     <Button
-        android:id="@+id/cancelAlarmBtn"
+        android:id="@+id/cancelAlarm"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginTop="10dp"

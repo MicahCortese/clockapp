@@ -5,8 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".MainActivity">
+    android:background="@color/teal">
 
     <TextClock
         android:id="@+id/textClock"
@@ -18,12 +17,13 @@
         android:layout_marginBottom="365dp"
         android:textAlignment="center"
         android:textSize="40sp"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextDate" />
 
-    <EditText
+    <TextView
         android:id="@+id/editTextDate"
         android:layout_width="348dp"
         android:layout_height="95dp"
@@ -32,9 +32,9 @@
         android:layout_marginEnd="31dp"
         android:layout_marginBottom="4dp"
         android:ems="10"
-        android:inputType="date"
         android:textAlignment="center"
         android:textSize="40sp"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/textClock"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -43,14 +43,42 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
         android:layout_marginTop="28dp"
         android:onClick="onTimerClick"
         android:text="@string/start_timer_button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textClock" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="146dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginBottom="103dp"
+        android:onClick="onStopWatchClick"
+        android:text="@string/start_stopwatch_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="146dp"
+        android:layout_marginEnd="145dp"
+        android:onClick="onAlarmClick"
+        android:text="@string/start_alarm_button"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
